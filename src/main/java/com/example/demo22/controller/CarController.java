@@ -7,6 +7,7 @@ import com.example.demo22.sevice.ICarSevice;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -22,5 +23,16 @@ public class CarController {
     model.addAttribute("car",car);
     return "/index";
 }
+    @GetMapping("/create")
+    public String create(Model model){
+        model.addAttribute("car",new Car());
+        return "/create";
+    }
+    @PostMapping("/save")
+    public String save(Car car){
+        car.setId((int) (Math.random() * 100));
+        carService.add(car);
+        return "redirect:/car";
+    }
 
 }

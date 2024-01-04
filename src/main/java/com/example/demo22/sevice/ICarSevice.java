@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface ICarSevice {
     public abstract List<Car> findAll();
+
+    void add(Car addCar);
 }
 
 

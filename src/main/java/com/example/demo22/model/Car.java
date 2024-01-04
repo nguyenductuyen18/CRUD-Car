@@ -3,17 +3,17 @@ package com.example.demo22.model;
 public class Car {
     private int id;
     private String name;
-    private int price;
+    private double price;
     private String manufactor;
 
-    public Car(int id, String name, int price, String manufactor) {
+    public Car(int id, String name, double price, String manufactor) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.manufactor = manufactor;
     }
 
-    public Car(String name, int price, String manufactor) {
+    public Car(String name, double price, String manufactor) {
         this.name = name;
         this.price = price;
         this.manufactor = manufactor;
@@ -39,11 +39,11 @@ public class Car {
         this.name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

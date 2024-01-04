@@ -8,13 +8,17 @@ import java.util.List;
 import java.util.Map;
 
 public class CarService implements ICarSevice {
-    private static Map<Integer, Car> car;
+    private static Map<Integer, Car> cars;
     static {
-        car = new HashMap<>();
-        car.put(1,new Car(1,"BMW",400000,"oto"));
+        cars = new HashMap<>();
+        cars.put(1,new Car(1,"BMW",400000,"oto"));
     }
     @Override
     public List<Car> findAll() {
-        return new ArrayList<>(car.values());
+        return new ArrayList<>(cars.values());
+    }
+    @Override
+    public void add(Car car){
+cars.put(car.getId(),car);
     }
 }
