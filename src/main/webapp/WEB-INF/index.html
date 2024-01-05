@@ -15,8 +15,8 @@
     <th>price</th>
     <th>manufactor</th>
     <th>Edit</th>
-<!--    <th>delete</th>-->
-
+    <th>Remote</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
@@ -25,6 +25,8 @@
 <td th:text="${row.getPrice()}"></td>
 <td th:text="${row.getManufactor()}"></td>
 <td><a th:href="@{/car/{id}/edit(id=${row.getId()})}">update</a></td>
+<td><a th:href="@{/car/{id}/delete(id=${row.getId()})}">delete</a></td>
+<td><a th:href="@{/car/{id}/show(id=${row.getId()})}">show</a></td>
 </tr>
 </tbody>
 </table>

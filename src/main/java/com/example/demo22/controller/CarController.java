@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -45,5 +46,21 @@ public class CarController {
     carService.update(car.getId(), car);
         return "redirect:/car";
     }
+    @GetMapping("/{id}/delete")
+    public String delete(@PathVariable int id, Model model){
+        model.addAttribute("carDelete",carService.findById(id));
+        return "/delete";
+    }
+    @PostMapping("/playDelete")
+    public String playDelete(Car car){
+    carService.delete(car.getId());
+    return "redirect:/car";
+    }
+    @GetMapping("/{id}/show")
+    public String show(@PathVariable int id, Model model){
+        model.addAttribute("car",carService.findById(id));
+        return "/showCar";
+    }
+
 
 }

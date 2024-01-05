@@ -32,4 +32,9 @@ cars.put(car.getId(),car);
         cars.put(id, car);
 
     }
+    @Override
+    public void delete(int id) {
+        cars.remove(id);
+
+    }
 }

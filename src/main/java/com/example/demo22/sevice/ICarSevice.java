@@ -12,6 +12,10 @@ public interface ICarSevice {
     Object findById(int id);
 
     void update(int id, Car car);
+
+
+
+    void delete(int id);
 }
 
 
