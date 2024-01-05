@@ -21,4 +21,15 @@ public class CarService implements ICarSevice {
     public void add(Car car){
 cars.put(car.getId(),car);
     }
+
+    @Override
+    public Car findById(int id) {
+        return cars.get(id);
+    }
+
+    @Override
+    public void update(int id, Car car) {
+        cars.put(id, car);
+
+    }
 }

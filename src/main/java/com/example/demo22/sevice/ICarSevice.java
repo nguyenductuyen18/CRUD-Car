@@ -8,6 +8,10 @@ public interface ICarSevice {
     public abstract List<Car> findAll();
 
     void add(Car addCar);
+
+    Object findById(int id);
+
+    void update(int id, Car car);
 }
 
 
