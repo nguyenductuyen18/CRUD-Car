@@ -7,8 +7,13 @@
 <body>
 <p><a th:href="@{/car}">Home</a></p>
 <form  th:object="${car}" method="post">
+  <p>Name</p>
   <div><input th:field="*{name}"></div>
+  <br>
+  <p>price</p>
   <div><input th:field="*{price}"></div>
+  <br>
+  <p>manufactor</p>
   <div><input th:field="*{manufactor}"></div>
 
 

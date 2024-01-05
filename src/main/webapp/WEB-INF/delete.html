@@ -8,8 +8,13 @@
 <p><a th:href="@{/car}">Home</a></p>
 <form th:action="@{/car/playDelete}" th:object="${carDelete}" method="post">
   <input th:field="*{id}" type="hidden"/>
+  <p>Name</p>
   <div><input th:field="*{name}" id="name"></div>
+  <br>
+  <p>price</p>
   <div><input th:field="*{price}" id="price"></div>
+  <br>
+  <p>manufactor</p>
   <div><input th:field="*{manufactor} " id="manufactor"></div>
   <input type="submit" value="delete">
 
